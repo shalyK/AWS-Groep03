@@ -33,9 +33,9 @@ class Navbar extends Component {
   render() {
     return (
       <Nav>
-        <NavLink to='/'>
+        
           <img src="AP_logo.jpg" alt='logo' height="30" width="50" />
-        </NavLink>
+
         <Bars />
 
         {this.props.auth.isAuthenticated ?
