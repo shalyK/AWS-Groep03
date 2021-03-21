@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+* {
+  font-family: 'Sora', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+.navButton{
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  /* Second Nav */
+  margin-left: 24px;
+
+}
+.navButton:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+
+.navbar, .navbar-end, .navbar-menu, .navbar-start {
+  align-items: stretch !important;
+  display: flex !important;
+}
+
+.navbar-menu {
+  flex-grow: 1 !important;
+  flex-shrink: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.navbar-item {
+  display: flex !important;
+}
+
+.navbar-end {
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+}
+
+.features {
+  padding-bottom: 3em;
+}
+
+body {
+  visibility: visible !important;
+}
+
+
+.auth form {
+  margin-top: 1em;
+  max-width: 50%;
+  position: "center";
+}
+
+.buttons {
+  margin-left: 1em;
+}

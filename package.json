@@ -1,0 +1,48 @@
+{
+  "name": "react-navbar-v3",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/ui-react": "^1.0.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "aws-amplify": "^3.3.25",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "morgan": "^1.10.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.15.4",
+    "react-icons": "^3.11.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "reactstrap": "^8.9.0",
+    "styled-components": "^5.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start:server": "node ./server.js",
+    "dev": "concurrently --kill-others \"npm run start:server\" \"npm run start\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
