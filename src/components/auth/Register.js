@@ -103,7 +103,7 @@ class Register extends Component {
               placeholder="Wachtwoord"
               value={this.state.password}
                 onChange={this.onInputChange} required />
-              <label for="confirmpassword" style={{ paddingTop: "22px" }}>&nbsp;Confirm Password
+              <label for="confirmpassword" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord Bevestigen
           </label>
               <input class="form-content" type="password" name="confirmpassword"
                 id="confirmpassword"
