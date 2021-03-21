@@ -65,7 +65,7 @@ class Navbar extends Component {
         <NavBtn>
           {this.props.auth.isAuthenticated ?
             <button className="navButton" onClick={this.handleLogOut}>Afmelden</button> :
-            <button onClick={this.handleLogin} className="navButton">Aanmelden</button> }
+            <button onClick={this.handleLogin} className="navButton">Inloggen</button> }
         </NavBtn>
       </Nav>
       

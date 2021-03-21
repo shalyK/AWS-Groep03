@@ -112,7 +112,7 @@ class Register extends Component {
                 onChange={this.onInputChange}
                 onChange={this.onInputChange} required />
               <div class="form-border"></div>
-              <input id="submit-btn" type="submit" name="submit" value="AANMELDEN" />
+              <input id="submit-btn" type="submit" name="submit" value="REGISTREER" />
             </form>
           </div>
         </div>
