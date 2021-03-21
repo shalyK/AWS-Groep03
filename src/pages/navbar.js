@@ -49,9 +49,7 @@ class Navbar extends Component {
             <NavLink to='/about' activeStyle>
               About
           </NavLink>
-            <NavLink to='/login' redr activeStyle>
-              About
-          </NavLink>
+
           
           </NavMenu> : null}
         <NavBtn>
