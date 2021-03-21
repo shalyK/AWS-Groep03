@@ -12,10 +12,19 @@ import {
 
 
 class Navbar extends Component {
+  async componentDidMount() {
+    try {
+      const session = await Auth.currentSession();
+      const user = await Auth.currentAuthenticatedUser();
+      this.props.history.push('/upload');
 
-  componentDidMount(){
-    this.props.history.push('/login');
+    } catch (error) {
+
+      this.props.history.push('/login');
+    }
+    this.setState({ isAuthenticating: false })
   }
+
     handleLogOut = async event =>{
     event.preventDefault();
     console.log("tet")
@@ -30,32 +39,33 @@ class Navbar extends Component {
       
     }
   }
+  handleLogin = () => {
+    this.props.history.push('/login');
+  }
   render() {
     return (
-      <Nav>
-        
-          <img src="AP_logo.jpg" alt='logo' height="30" width="50" />
-
+      <Nav>        
+          <img src="ap1.png" alt='logo' />
         <Bars />
 
         {this.props.auth.isAuthenticated ?
         <NavMenu>
           <NavLink to='/upload' activeStyle>
-              Upload
+              Bestand uploaden
           </NavLink>
           <NavLink to='/download' activeStyle>
-              Download File
+             Bestand downloaden
           </NavLink>
             <NavLink to='/about' activeStyle>
-              About
+              Over ons
           </NavLink>
 
           
           </NavMenu> : null}
         <NavBtn>
           {this.props.auth.isAuthenticated ?
-            <button className="navButton" onClick={this.handleLogOut}>Logout</button> :
-            <NavBtnLink to='/login'>Sign In</NavBtnLink> }
+            <button className="navButton" onClick={this.handleLogOut}>Afmelden</button> :
+            <button onClick={this.handleLogin} className="navButton">Aanmelden</button> }
         </NavBtn>
       </Nav>
       

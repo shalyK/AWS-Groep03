@@ -5,6 +5,8 @@ import { Auth } from "aws-amplify";
 import {
   NavLink
 } from '../../pages/NavbarElements';
+import '../../login.css';
+
 
 class LogIn extends Component {
   state = {
@@ -68,55 +70,35 @@ class LogIn extends Component {
 
   render() {
     return (
-      <section className="section auth">
-        <div className="container">
-          <h1>Log in</h1>
-          <FormErrors formerrors={this.state.errors} />
-
-          <form onSubmit={this.handleSubmit}>
-            <div className="field">
-              <p className="control">
-                <input 
-                  className="input" 
-                  type="text"
-                  id="username"
-                  aria-describedby="usernameHelp"
-                  placeholder="Enter username or email"
-                  value={this.state.username}
-                  onChange={this.onInputChange}
-                />
-              </p>
+      <div id="card">
+          <div id="card-content">
+            <div id="card-title">
+              <h2>LOGIN</h2>
+            <FormErrors formerrors={this.state.errors} style={{ color: 'red' }}/>
             </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input 
-                  className="input" 
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  value={this.state.password}
-                  onChange={this.onInputChange}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-lock"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control">
-                <button className="button is-success">
-                  Login
-                </button>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control">
-                <NavLink to="register"> <span style={{ color: 'blue' }}>Register</span></NavLink>
-              </p>
-            </div>
-          </form>
+          <form onSubmit={this.handleSubmit} class="form">
+              <label for="user-email" style={{paddingTop: "13px"}}>
+              &nbsp;Email
+          </label>
+            <input id="username" class="form-content" type="text" name="email" onChange={this.onInputChange}
+              id="username"
+              placeholder="Enter username or email"
+              value={this.state.username} autocomplete="on" required />
+              <div class="form-border"></div>
+            <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Password
+          </label>
+            <input class="form-content" type="password" name="password"
+              id="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.onInputChange} required />
+              <div class="form-border"></div>
+              <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+            <NavLink to="register"> <span style={{ color: 'blue' }}>Don't have account yet?</span></NavLink>
+            </form>
+          </div>
         </div>
-      </section>
+      
     );
   }
 }

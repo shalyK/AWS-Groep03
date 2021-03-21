@@ -12,12 +12,18 @@ const Download = () => {
       .then(res => res.json())
       .then(
         (result) => {
-          setUrl(result.Item.url)
-          setFileName(result.Item.filename)
-          window.open(
-            result.Item.url,
-            '_blank' 
-          );
+          if (result?.Item){
+            setUrl(result.Item.url)
+            setFileName(result.Item.filename)
+            window.open(
+              result.Item.url,
+              '_blank'
+            );
+          }else{
+            setUrl("")
+            setFileName("")
+            alert("file removed!")
+          }
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -32,23 +38,25 @@ const Download = () => {
   }
   return (
     <div>
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '50vh'
-      }}
-    >
-     <form onSubmit={handleSubmit(onSubmit)}>
-       <label>Geef UUID In!</label>
-          <input ref={register} value={uid} onChange={handleChangeInput} type="text" name="picture" style={{ width: 250 + 'px' }} />
-      <button>Submit</button>
-    </form>
-    </div>
-    
-      <h4>File name: {fileName}</h4>
-      <h4>Download link: {url}</h4>
+      <div id="card" style={{ width: "70%" }}>
+        <div id="card-content">
+          <div id="card-title">
+            <h2>Download File!</h2>
+          </div>
+          <form onSubmit={handleSubmit(onSubmit)} class="form">
+            <label for="user-email" style={{ paddingTop: "13px" }}>
+              &nbsp;Geef de unieke code (UUID) in:
+          </label>
+          <input
+           ref={register} value={uid} onChange={handleChangeInput}/>
+            <div class="form-border"></div>
+            <input id="submit-btn" type="submit" name="submit" value="Download" />
+          </form>
+        </div>
+
+        <h4>Bestand naam: {fileName}</h4>
+        <h4>Download link: {url}</h4>
+      </div>
       </div>
   );
 };

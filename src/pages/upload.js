@@ -10,8 +10,6 @@ const Upload = () => {
 
   var fileName;
   const onSubmit = async (data) => {
-    const formData = new FormData()
-    formData.append("picture", data.picture[0])
 
     
     fetch("https://ddaidvbveh.execute-api.us-east-1.amazonaws.com/default/getPresignedUrl?filename=" + fileName)
@@ -59,23 +57,26 @@ const Upload = () => {
 
   }
   return (
-    <div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '50vh'
-        }}
-      >
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input onChange={(e) => handleChange(e)} ref={register} type="file" name="picture" style={{ width: 250 + 'px' }}  />
-        <button  >Submit</button>
-        </form>
-      </div>
+        <div>
+      <div id="card" style={{ width: "70%" }}>
+        <div id="card-content">
+          <div id="card-title">
+            <h2>Upload File!</h2>
+          </div>
+          <form onSubmit={handleSubmit(onSubmit)} class="form">
+            <label for="user-email" style={{ paddingTop: "13px" }}>
+              &nbsp;Geef de unieke code (UUID) in:
+          </label>
+          <input
+           onChange={(e) => handleChange(e)} ref={register} type="file"/>
+            <div class="form-border"></div>
+            <input id="submit-btn" type="submit" name="submit" value="Uploaden" />
+          </form>
+        </div>
 
-      <h4>UUID: {uid}</h4>
-    </div>
+        <h4>UUID: {uid}</h4>
+      </div>
+      </div>
   );
 };
 

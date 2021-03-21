@@ -71,81 +71,54 @@ class Register extends Component {
 
   render() {
     return (
-      <section className="section auth">
-        <div className="container">
-          <h1>Register</h1>
-          <FormErrors formerrors={this.state.errors} />
+      <>
 
-          <form onSubmit={this.handleSubmit}>
-            <div className="field">
-              <p className="control">
-                <input 
-                  className="input" 
-                  type="text"
-                  id="username"
-                  aria-describedby="userNameHelp"
-                  placeholder="Enter username"
-                  value={this.state.username}
-                  onChange={this.onInputChange}
-                />
-              </p>
+        <FormErrors formerrors={this.state.errors} style={{ color: 'red' }} />
+      <div id="card">
+          <div id="card-content">
+            <div id="card-title">
+              <h2>Registreren</h2>
             </div>
-            <div className="field">
-              <p className="control has-icons-left has-icons-right">
-                <input 
-                  className="input" 
-                  type="email"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  value={this.state.email}
-                  onChange={this.onInputChange}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input 
-                  className="input" 
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  value={this.state.password}
-                  onChange={this.onInputChange}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-lock"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input 
-                  className="input" 
-                  type="password"
-                  id="confirmpassword"
-                  placeholder="Confirm password"
-                  value={this.state.confirmpassword}
-                  onChange={this.onInputChange}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-lock"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control">
-                <button className="button is-success">
-                  Register
-                </button>
-              </p>
-            </div>
-          </form>
+          <form onSubmit={this.handleSubmit}  class="form">
+              <label for="username" style={{paddingTop: "13px"}}>
+              &nbsp;Username
+          </label>
+            <input class="form-content" type="text" name="email" onChange={this.onInputChange}
+              id="username"
+              placeholder="Enter username or email"
+              value={this.state.username} autocomplete="on" required />
+              <label for="email" style={{ paddingTop: "13px" }}>
+                &nbsp;Email
+          </label>
+              <input id="email" class="form-content" type="email" name="email"
+                value={this.state.email}
+                onChange={this.onInputChange}
+                placeholder="Enter username or email"
+                 autocomplete="on" required />
+              <div class="form-border"></div>
+            <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Password
+          </label>
+            <input class="form-content" type="password" name="password"
+              id="password"
+              placeholder="Password"
+              value={this.state.password}
+                onChange={this.onInputChange} required />
+              <label for="confirmpassword" style={{ paddingTop: "22px" }}>&nbsp;Confirm Password
+          </label>
+              <input class="form-content" type="password" name="confirmpassword"
+                id="confirmpassword"
+                placeholder="Confirm password"
+                value={this.state.confirmpassword}
+                onChange={this.onInputChange}
+                onChange={this.onInputChange} required />
+              <div class="form-border"></div>
+              <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+            </form>
+          </div>
         </div>
-      </section>
+
+            
+      </>
     );
   }
 }

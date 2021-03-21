@@ -10,8 +10,20 @@ const About= () => {
         height: '90vh'
       }}
     >
-      <h1>Alpha Prem Shaly React APP!</h1>
+      <div>
+        <h1>ICT Architecture - Groep 03</h1>
+        <br></br>
+        <h2>Begeleid door Dries Van Hansewijck en Team CloudWay </h2>
+        <br></br>
+        <h2>
+          <ul>
+            <li>Alpha Kamara</li>
+            <li>Prem Kokra</li>
+            <li>Shaly Kanagarasa</li>
+          </ul>
+        </h2></div>
     </div>
+
   );
 };
 
