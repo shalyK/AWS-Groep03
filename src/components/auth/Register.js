@@ -74,45 +74,45 @@ class Register extends Component {
       <>
 
         <FormErrors formerrors={this.state.errors} style={{ color: 'red' }} />
-      <div id="card">
+        <div id="card" style={{ height: "450px" }}>
           <div id="card-content">
             <div id="card-title">
               <h2>Registreren</h2>
             </div>
           <form onSubmit={this.handleSubmit}  class="form">
               <label for="username" style={{paddingTop: "13px"}}>
-              &nbsp;Username
+              &nbsp;Gebruikersnaam
           </label>
             <input class="form-content" type="text" name="email" onChange={this.onInputChange}
               id="username"
-              placeholder="Enter username or email"
+              placeholder="Gebruikersnaam"
               value={this.state.username} autocomplete="on" required />
               <label for="email" style={{ paddingTop: "13px" }}>
-                &nbsp;Email
+                &nbsp;E-mailadres
           </label>
               <input id="email" class="form-content" type="email" name="email"
                 value={this.state.email}
                 onChange={this.onInputChange}
-                placeholder="Enter username or email"
+                placeholder="E-mailadres"
                  autocomplete="on" required />
               <div class="form-border"></div>
-            <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Password
+            <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
           </label>
             <input class="form-content" type="password" name="password"
               id="password"
-              placeholder="Password"
+              placeholder="Wachtwoord"
               value={this.state.password}
                 onChange={this.onInputChange} required />
               <label for="confirmpassword" style={{ paddingTop: "22px" }}>&nbsp;Confirm Password
           </label>
               <input class="form-content" type="password" name="confirmpassword"
                 id="confirmpassword"
-                placeholder="Confirm password"
+                placeholder="Wachtwoord bevestigen"
                 value={this.state.confirmpassword}
                 onChange={this.onInputChange}
                 onChange={this.onInputChange} required />
               <div class="form-border"></div>
-              <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+              <input id="submit-btn" type="submit" name="submit" value="AANMELDEN" />
             </form>
           </div>
         </div>

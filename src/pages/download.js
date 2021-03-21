@@ -41,7 +41,7 @@ const Download = () => {
       <div id="card" style={{ width: "70%" }}>
         <div id="card-content">
           <div id="card-title">
-            <h2>Download File!</h2>
+            <h2>Bestand downloaden</h2>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} class="form">
             <label for="user-email" style={{ paddingTop: "13px" }}>
@@ -50,7 +50,7 @@ const Download = () => {
           <input
            ref={register} value={uid} onChange={handleChangeInput}/>
             <div class="form-border"></div>
-            <input id="submit-btn" type="submit" name="submit" value="Download" />
+            <input id="submit-btn" type="submit" name="submit" value="Downloaden" />
           </form>
         </div>
 

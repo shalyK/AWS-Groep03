@@ -13,7 +13,7 @@ function FormErrors(props) {
             : ""}
         </div>
         <div className="row justify-content-center help is-danger">
-          {props.formerrors.blankfield ? "All fields are required" : ""}
+          {props.formerrors.blankfield ? "Alle velden zijn verplicht" : ""}
         </div>
       </div>
     );
