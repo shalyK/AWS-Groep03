@@ -93,7 +93,7 @@ class LogIn extends Component {
               value={this.state.password}
               onChange={this.onInputChange} required />
               <div class="form-border"></div>
-              <input id="submit-btn" type="submit" name="submit" value="AANMELDEN" />
+              <input id="submit-btn" type="submit" name="submit" value="INLOGGEN" />
             <NavLink to="register"> <span style={{ color: 'blue' }}>Heb je nog geen account?</span></NavLink>
             </form>
           </div>
