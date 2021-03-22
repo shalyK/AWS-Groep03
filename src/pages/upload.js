@@ -63,14 +63,14 @@ const Upload = () => {
           <div id="card-title">
             <h2>Bestand uploaden</h2>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} class="form">
-            <label for="user-email" style={{ paddingTop: "13px"}}>
+          <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <label htmlFor="user-email" style={{ paddingTop: "13px"}}>
               &nbsp;Geef de unieke code (UUID) in:
           </label>
           <br></br>
           <input
            onChange={(e) => handleChange(e)} ref={register} type="file"/>
-            <div class="form-border"></div>
+            <div className="form-border"></div>
             <input id="submit-btn" type="submit" name="submit" value="Uploaden" />
           </form>
         </div>

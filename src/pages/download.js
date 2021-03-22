@@ -1,14 +1,24 @@
-import React, {useState} from 'react';
-import {useForm} from 'react-hook-form'
+import React, { useState, useEffect} from 'react';
+import { useForm } from 'react-hook-form'
+import Auth from '@aws-amplify/auth';
+
 const Download = () => {
   const { register, handleSubmit } = useForm()
   const [uid, setUid] = useState();
   const [url, setUrl] = useState();
+  const [username, setUsername] = useState();
   const [fileName, setFileName] = useState();
 
+  useEffect(() => {
+    async function fetchData() {
+      const user = await Auth.currentAuthenticatedUser();
+      setUsername(user.username);
+    }
+    fetchData();
+  }, []);
   const onSubmit = async (data) => {
 
-    fetch("https://y62p6y7bx2.execute-api.us-east-1.amazonaws.com/default/GetFileById?id="+ uid)
+    fetch("https://y62p6y7bx2.execute-api.us-east-1.amazonaws.com/default/GetFileById?id=" + uid + "&username=" + username)
       .then(res => res.json())
       .then(
         (result) => {
@@ -43,14 +53,14 @@ const Download = () => {
           <div id="card-title">
             <h2>Bestand downloaden</h2>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} class="form">
-            <label for="user-email" style={{ paddingTop: "13px" }}>
+          <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <label htmlFor="user-email" style={{ paddingTop: "13px" }}>
               &nbsp;Geef de unieke code (UUID) in:
           </label>
           <br></br>
           <input
            ref={register} value={uid} onChange={handleChangeInput}/>
-            <div class="form-border"></div>
+            <div className="form-border"></div>
             <input id="submit-btn" type="submit" name="submit" value="Downloaden" />
           </form>
         </div>

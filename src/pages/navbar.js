@@ -65,7 +65,7 @@ class Navbar extends Component {
         <NavBtn>
           {this.props.auth.isAuthenticated && this.props.auth.user ?
             <div className="username">
-              <label id="username" class="username">Welkom {this.props.auth.user.username}  </label>  
+              <label id="username" className="username">Welkom {this.props.auth.user.username}</label>  
             <button className="navButton" onClick={this.handleLogOut}>Afmelden</button>
             </div>
              :

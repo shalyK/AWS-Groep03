@@ -76,23 +76,23 @@ class LogIn extends Component {
               <h2>INLOGGEN</h2>
             <FormErrors formerrors={this.state.errors} style={{ color: 'red' }}/>
             </div>
-          <form onSubmit={this.handleSubmit} class="form">
-              <label for="user-email" style={{paddingTop: "13px"}}>
+          <form onSubmit={this.handleSubmit} className="form">
+            <label htmlFor="user-email" style={{paddingTop: "13px"}}>
               &nbsp;Gebruikersnaam
           </label>
-            <input id="username" class="form-content" type="text" name="email" onChange={this.onInputChange}
+            <input id="username" className="form-content" type="text" name="email" onChange={this.onInputChange}
               id="username"
               placeholder="Gebruikersnaam"
               value={this.state.username} autocomplete="on" required />
-              <div class="form-border"></div>
-            <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
+            <div className="form-border"></div>
+            <label htmlFor="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
           </label>
-            <input class="form-content" type="password" name="password"
+            <input className="form-content" type="password" name="password"
               id="password"
               placeholder="Wachtwoord"
               value={this.state.password}
               onChange={this.onInputChange} required />
-              <div class="form-border"></div>
+            <div className="form-border"></div>
               <input id="submit-btn" type="submit" name="submit" value="INLOGGEN" />
             <NavLink to="register"> <span style={{ color: 'blue' }}>Heb je nog geen account?</span></NavLink>
             </form>

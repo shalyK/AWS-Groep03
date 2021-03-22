@@ -79,39 +79,39 @@ class Register extends Component {
             <div id="card-title">
               <h2>Registreren</h2>
             </div>
-          <form onSubmit={this.handleSubmit}  class="form">
-              <label for="username" style={{paddingTop: "13px"}}>
+            <form onSubmit={this.handleSubmit} className="form">
+              <label htmlFor="username" style={{paddingTop: "13px"}}>
               &nbsp;Gebruikersnaam
           </label>
-            <input class="form-content" type="text" name="email" onChange={this.onInputChange}
+              <input className="form-content" type="text" name="email" onChange={this.onInputChange}
               id="username"
               placeholder="Gebruikersnaam"
               value={this.state.username} autocomplete="on" required />
-              <label for="email" style={{ paddingTop: "13px" }}>
+              <label htmlFor="email" style={{ paddingTop: "13px" }}>
                 &nbsp;E-mailadres
           </label>
-              <input id="email" class="form-content" type="email" name="email"
+              <input id="email" className="form-content" type="email" name="email"
                 value={this.state.email}
                 onChange={this.onInputChange}
                 placeholder="E-mailadres"
                  autocomplete="on" required />
-              <div class="form-border"></div>
-          <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
+              <div className="form-border"></div>
+              <label htmlFor="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
           </label>
-            <input class="form-content" type="password" name="password"
+              <input className="form-content" type="password" name="password"
               id="password"
               placeholder="Wachtwoord"
               value={this.state.password}
                 onChange={this.onInputChange} required />
-              <label for="confirmpassword" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord Bevestigen
+              <label htmlFor="confirmpassword" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord Bevestigen
           </label>
-              <input class="form-content" type="password" name="confirmpassword"
+              <input className="form-content" type="password" name="confirmpassword"
                 id="confirmpassword"
                 placeholder="Wachtwoord bevestigen"
                 value={this.state.confirmpassword}
                 onChange={this.onInputChange}
                 onChange={this.onInputChange} required />
-              <div class="form-border"></div>
+              <div className="form-border"></div>
               <input id="submit-btn" type="submit" name="submit" value="REGISTREER" />
             </form>
           </div>
