@@ -96,7 +96,7 @@ class Register extends Component {
                 placeholder="E-mailadres"
                  autocomplete="on" required />
               <div class="form-border"></div>
-            <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
+          <label for="password" style={{ paddingTop: "22px" }}>&nbsp;Wachtwoord
           </label>
             <input class="form-content" type="password" name="password"
               id="password"

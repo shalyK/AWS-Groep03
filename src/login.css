@@ -52,7 +52,7 @@ label {
   font-family: "Raleway SemiBold", sans-serif;
   height: 42.3px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
   transition: 0.25s;
   width: 153px;
 }
@@ -71,7 +71,6 @@ label {
 }
 .form-content {
   background: #fbfbfb;
-  border: none;
   outline: none;
   padding-top: 14px;
 }
