@@ -22,7 +22,7 @@ const Download = () => {
           }else{
             setUrl("")
             setFileName("")
-            alert("file removed!")
+            alert("Invoerveld is leeg of gevraagd bestand is ouder dan 1 dag!")
           }
         },
         // Note: it's important to handle errors here
@@ -47,13 +47,13 @@ const Download = () => {
             <label for="user-email" style={{ paddingTop: "13px" }}>
               &nbsp;Geef de unieke code (UUID) in:
           </label>
+          <br></br>
           <input
            ref={register} value={uid} onChange={handleChangeInput}/>
             <div class="form-border"></div>
             <input id="submit-btn" type="submit" name="submit" value="Downloaden" />
           </form>
         </div>
-
         <h4>Bestand naam: {fileName}</h4>
         <h4>Download link: {url}</h4>
       </div>

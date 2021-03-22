@@ -12,7 +12,7 @@ h1 {
 }
 .navButton{
   border-radius: 4px;
-  background: #256ce1;
+  background: #252424;
   padding: 10px 22px;
   color: #fff;
   outline: none;
@@ -27,8 +27,8 @@ h1 {
 }
 .navButton:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #ffffff;
+    color: #ffffff;
   }
 
 .navbar, .navbar-end, .navbar-menu, .navbar-start {

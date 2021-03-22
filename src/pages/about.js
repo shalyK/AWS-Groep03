@@ -2,17 +2,14 @@ import React from 'react';
 
 const About= () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '90vh'
-      }}
-    >
-      <div>
-        <h1>ICT Architecture - Groep 03</h1>
-        <br></br>
+
+    <div>
+      <div id="card" style={{ width: "70%" }}>
+        <div id="card-content">
+          <div id="card-title">
+            <h2>ICT Architecture - Groep 03</h2>
+          </div>
+                  <br></br>
         <h2>Begeleid door Dries Van Hansewijck en Team CloudWay </h2>
         <br></br>
         <h2>
@@ -21,8 +18,11 @@ const About= () => {
             <li>Prem Kokra</li>
             <li>Shaly Kanagarasa</li>
           </ul>
-        </h2></div>
-    </div>
+        </h2>
+        </div>
+
+      </div>
+      </div>
 
   );
 };
