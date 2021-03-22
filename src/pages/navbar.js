@@ -63,8 +63,12 @@ class Navbar extends Component {
           
           </NavMenu> : null}
         <NavBtn>
-          {this.props.auth.isAuthenticated ?
-            <button className="navButton" onClick={this.handleLogOut}>Afmelden</button> :
+          {this.props.auth.isAuthenticated && this.props.auth.user ?
+            <div className="username">
+              <h9 className="username">Welkom {this.props.auth.user.username}  </h9>  
+            <button className="navButton" onClick={this.handleLogOut}>Afmelden</button>
+            </div>
+             :
             <button onClick={this.handleLogin} className="navButton">Inloggen</button> }
         </NavBtn>
       </Nav>
